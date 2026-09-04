@@ -34,7 +34,7 @@ function ContactCard({ className = "" }: { className?: string }) {
         </li>
         <li className="flex items-start gap-3">
           <Mail size={18} className="mt-0.5 shrink-0 text-primary" />
-          <a href={`mailto:${company.email}`} className="hover:text-primary">
+          <a href={`mailto:${company.email}`} className="min-w-0 break-words hover:text-primary">
             {company.email}
           </a>
         </li>
