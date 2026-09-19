@@ -26,8 +26,8 @@ export function About() {
           <Reveal>
             <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=1200&auto=format&fit=crop"
-                alt="Architectural detail of a modern building under natural light"
+                src="https://res.cloudinary.com/carbll34/image/upload/f_auto,q_auto:best/v1789825905/Lotus_tower.png"
+                alt="Rope-access technicians working on the illuminated Colombo Lotus Tower at night"
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
@@ -40,8 +40,9 @@ export function About() {
           >
             <div className="overflow-hidden rounded-2xl border-4 border-background shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=900&auto=format&fit=crop"
-                alt="Construction worker reviewing plans on site"
+                // HEIC original (browsers can't render it): f_auto converts it on delivery.
+                src="https://res.cloudinary.com/carbll34/image/upload/c_limit,w_1200/f_auto,q_auto:best/v1789827440/2025_08_18_16_00_IMG_4609.heic"
+                alt="Reviewing documents at a desk in the Nihal Construction office"
                 className="aspect-[4/3] w-full object-cover"
                 loading="lazy"
               />
