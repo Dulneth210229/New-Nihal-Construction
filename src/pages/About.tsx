@@ -1,10 +1,12 @@
 import { PageHeader } from "../components/ui/PageHeader";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { Reveal } from "../components/ui/Reveal";
+import { CornerMarks } from "../components/ui/CornerMarks";
 import { Stats } from "../components/home/Stats";
 import { CTA } from "../components/home/CTA";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { company } from "../config/company";
+import { officeGallery, director } from "../data/team";
 
 const pillars = [
   {
@@ -72,6 +74,69 @@ export default function About() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-background py-24 sm:py-32">
+        <div className="container-px">
+          <SectionHeading
+            eyebrow="Our People & Place"
+            title="Where we work, and who leads us."
+            description="TODO: Replace these placeholder photos with real images of the Nihal Construction office, team and leadership."
+          />
+
+          <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2">
+            <Reveal className="md:col-span-2">
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl md:aspect-[21/9]">
+                <img
+                  src={officeGallery[0].src}
+                  alt={officeGallery[0].alt}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+                <CornerMarks topOffset={16} edgeOffset={16} />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-secondary/80 to-transparent p-6">
+                  <p className="font-mono text-xs uppercase tracking-widest text-white">
+                    {officeGallery[0].caption}
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+
+            {officeGallery.slice(1).map((image, i) => (
+              <Reveal key={image.src} delay={0.1 + i * 0.05}>
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
+                  <img src={image.src} alt={image.alt} className="h-full w-full object-cover" loading="lazy" />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-secondary/80 to-transparent p-6">
+                    <p className="font-mono text-xs uppercase tracking-widest text-white">{image.caption}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.2} className="mt-5">
+            <div className="grid grid-cols-1 overflow-hidden rounded-2xl bg-secondary sm:grid-cols-[minmax(0,280px)_1fr]">
+              <div className="relative aspect-[4/5] sm:aspect-auto">
+                <img
+                  src={director.image}
+                  alt="Portrait of the Managing Director"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-8 sm:p-10">
+                <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                  Leadership
+                </span>
+                <p className="mt-4 text-balance font-display text-xl font-medium leading-snug text-white sm:text-2xl">
+                  &ldquo;{director.quote}&rdquo;
+                </p>
+                <p className="mt-6 text-sm font-semibold text-white">{director.name}</p>
+                <p className="text-sm text-white/50">{director.role}</p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

@@ -57,4 +57,15 @@ export const services: Service[] = [
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop",
     points: ["Planning & scheduling", "Cost control", "Site supervision", "Handover management"],
   },
+  {
+    id: "renovations",
+    index: "06",
+    title: "Renovations",
+    summary: "Upgrades, remodels and refurbishments for existing buildings.",
+    description:
+      "We breathe new life into existing homes and commercial spaces — from full refurbishments to targeted upgrades — planned to minimise disruption and finished to a like-new standard.",
+    image:
+      "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=1600&auto=format&fit=crop",
+    points: ["Home remodelling", "Commercial refurbishment", "Structural repairs", "Interior & exterior finishing"],
+  },
 ];

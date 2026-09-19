@@ -1,18 +1,19 @@
 import type { Partner } from "../types";
 
-// TODO: Replace with actual partner/client logos. These are neutral wordmark placeholders.
-const makePlaceholderLogo = (label: string) =>
-  `data:image/svg+xml,${encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="160" height="48"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="600" fill="#5B6270">${label}</text></svg>`
-  )}`;
+// f_auto: best format per browser · q_auto:best: highest auto-quality tier ·
+// c_limit,w_400: caps width (two originals are 3200px/1.5MB) but never upscales ·
+// e_trim (opt-in): strips the empty white padding baked into some logo canvases so
+// the mark fills its tile instead of floating small in the middle.
+const cloudinary = (path: string, trim = false) =>
+  `https://res.cloudinary.com/carbll34/image/upload/${trim ? "e_trim/" : ""}f_auto,q_auto:best,c_limit,w_400/${path}`;
 
+// Partner names are read from the logo artwork/filenames — confirm before launch.
 export const partners: Partner[] = [
-  { id: "p1", name: "Apex Holdings", logo: makePlaceholderLogo("APEX HOLDINGS") },
-  { id: "p2", name: "Meridian Group", logo: makePlaceholderLogo("MERIDIAN GROUP") },
-  { id: "p3", name: "Stratum Materials", logo: makePlaceholderLogo("STRATUM") },
-  { id: "p4", name: "Lanka Steel Works", logo: makePlaceholderLogo("LANKA STEEL") },
-  { id: "p5", name: "Coastal Cement Co.", logo: makePlaceholderLogo("COASTAL CEMENT") },
-  { id: "p6", name: "Vantage Developers", logo: makePlaceholderLogo("VANTAGE") },
-  { id: "p7", name: "Orbit Engineering", logo: makePlaceholderLogo("ORBIT ENGINEERING") },
-  { id: "p8", name: "Northline Bank", logo: makePlaceholderLogo("NORTHLINE BANK") },
+  { id: "p1", name: "Colombo Lotus Tower", logo: cloudinary("v1789815915/Untitled_design_1_-rlqbT8YD.png", true) },
+  { id: "p2", name: "John Keells Holdings", logo: cloudinary("v1789815914/jkeells-Dip3ZNS1.png", true) },
+  { id: "p3", name: "Avonsmart Engineering", logo: cloudinary("v1789815912/Avonsmart-BivwxTLx.jpg") },
+  { id: "p4", name: "Roots", logo: cloudinary("v1789815912/Roots-CM28YxKj.jpg") },
+  { id: "p5", name: "Keells", logo: cloudinary("v1789815912/Keells-CVygT-lt.png") },
+  { id: "p6", name: "BYD", logo: cloudinary("v1789815912/images.png", true) },
+  { id: "p7", name: "AB Mauri", logo: cloudinary("v1789815912/AB-mauri-sgVpUMGi.png", true) },
 ];

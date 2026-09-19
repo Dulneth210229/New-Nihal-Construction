@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, useMotionTemplate, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useReducedMotion,
+  useSpring,
+} from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "../ui/Button";
 import { CornerMarks } from "../ui/CornerMarks";
@@ -95,7 +102,9 @@ export function Hero() {
         transition={{ delay: 0.9, duration: 0.6 }}
         className="absolute left-6 top-24 z-10 hidden flex-col gap-1 sm:flex lg:left-8"
       >
-        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/45">Site Reference</span>
+        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/45">
+          Site Reference
+        </span>
         <Coordinates className="text-white/70" />
       </motion.div>
 
@@ -113,7 +122,10 @@ export function Hero() {
                 key={slide}
                 initial={{ scaleY: 0 }}
                 animate={{ scaleY: 1 }}
-                transition={{ duration: prefersReducedMotion ? 0 : SLIDE_DURATION / 1000, ease: "linear" }}
+                transition={{
+                  duration: prefersReducedMotion ? 0 : SLIDE_DURATION / 1000,
+                  ease: "linear",
+                }}
                 style={{ transformOrigin: "top" }}
                 className="absolute inset-0 rounded-full bg-primary"
               />
@@ -150,7 +162,11 @@ export function Hero() {
               key={word}
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.15 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.8,
+                delay: 0.15 + i * 0.1,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className={`block ${word === "Next." ? "text-primary" : ""}`}
             >
               {word}
@@ -165,15 +181,19 @@ export function Hero() {
           className="mt-8 flex flex-col gap-8 border-t border-white/15 pt-8 sm:flex-row sm:items-end sm:justify-between"
         >
           <p className="max-w-md text-base leading-relaxed text-white/70 sm:text-lg">
-            Nihal Construction plans, engineers and builds commercial, residential and
-            infrastructure projects across Sri Lanka — with accountability from groundbreaking
-            to handover.
+            Nihal Construction plans, engineers and builds commercial,
+            residential and infrastructure projects across Sri Lanka — with
+            accountability from groundbreaking to handover.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button to="/projects" variant="primary">
               Explore Our Work
             </Button>
-            <Button to="/contact" variant="ghost" className="text-white border-white/30 hover:border-white">
+            <Button
+              to="/contact"
+              variant="ghost"
+              className="text-white border-white/30 hover:border-white"
+            >
               Start a Project
             </Button>
           </div>
