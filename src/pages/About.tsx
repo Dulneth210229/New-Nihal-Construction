@@ -2,6 +2,9 @@ import { PageHeader } from "../components/ui/PageHeader";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { Reveal } from "../components/ui/Reveal";
 import { CornerMarks } from "../components/ui/CornerMarks";
+import { Coordinates } from "../components/ui/Coordinates";
+import { Button } from "../components/ui/Button";
+import { Clock, MapPin, Phone } from "lucide-react";
 import { Stats } from "../components/home/Stats";
 import { CTA } from "../components/home/CTA";
 import { usePageMeta } from "../hooks/usePageMeta";
@@ -85,27 +88,87 @@ export default function About() {
             description="TODO: Replace these placeholder photos with real images of the Nihal Construction office, team and leadership."
           />
 
-          <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2">
-            <Reveal className="md:col-span-2">
-              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl md:aspect-[21/9]">
+          <div className="mt-16 grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)]">
+            <Reveal>
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-secondary">
                 <img
                   src={officeGallery[0].src}
                   alt={officeGallery[0].alt}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/75 via-secondary/5 to-transparent" />
                 <CornerMarks topOffset={16} edgeOffset={16} />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-secondary/80 to-transparent p-6">
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6">
                   <p className="font-mono text-xs uppercase tracking-widest text-white">
                     {officeGallery[0].caption}
                   </p>
+                  <Coordinates className="text-white/60" />
                 </div>
               </div>
             </Reveal>
 
+            <Reveal delay={0.1}>
+              <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-2xl bg-secondary p-8 sm:p-10">
+                <CornerMarks corners="top" topOffset={16} edgeOffset={16} />
+                <div>
+                  <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                    Head Office
+                  </span>
+                  <h3 className="mt-4 font-display text-2xl font-semibold text-white sm:text-3xl">
+                    Come and visit us.
+                  </h3>
+                  <ul className="mt-8 space-y-5 text-sm text-white/70">
+                    <li className="flex items-start gap-3">
+                      <MapPin size={18} className="mt-0.5 shrink-0 text-primary" />
+                      <span>
+                        {company.address.line1}
+                        <br />
+                        {company.address.line2}, {company.address.country}
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Phone size={18} className="mt-0.5 shrink-0 text-primary" />
+                      <a href={`tel:${company.phone.replace(/\s/g, "")}`} className="hover:text-primary">
+                        {company.phoneDisplay}
+                      </a>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Clock size={18} className="mt-0.5 shrink-0 text-primary" />
+                      <span>
+                        {company.businessHours[0].days}: {company.businessHours[0].hours}
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Button
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                      `${company.name}, ${company.address.line1}, ${company.address.line2}, ${company.address.country}`
+                    )}`}
+                  >
+                    Get Directions
+                  </Button>
+                  <Button to="/contact" variant="ghost" className="text-white">
+                    Contact Us
+                  </Button>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {officeGallery.slice(1).map((image, i) => (
-              <Reveal key={image.src} delay={0.1 + i * 0.05}>
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
+              <Reveal
+                key={image.src}
+                delay={0.1 + i * 0.05}
+                className={i === 2 ? "md:col-span-2 lg:col-span-1" : undefined}
+              >
+                <div
+                  className={`relative w-full overflow-hidden rounded-2xl ${
+                    i === 2 ? "aspect-[4/5] md:aspect-[21/9] lg:aspect-[4/5]" : "aspect-[4/5]"
+                  }`}
+                >
                   <img src={image.src} alt={image.alt} className="h-full w-full object-cover" loading="lazy" />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-secondary/80 to-transparent p-6">
                     <p className="font-mono text-xs uppercase tracking-widest text-white">{image.caption}</p>

@@ -9,9 +9,16 @@ export interface GalleryImage {
 
 export const officeGallery: GalleryImage[] = [
   {
+    // Real photo (1589x990 PNG, 2.4MB). Already large enough for the card at 2x, so no
+    // upscaling: capped at 1600px and served as the best-fit format at top quality.
+    src: "https://res.cloudinary.com/carbll34/image/upload/c_limit,w_1600/f_auto,q_auto:best/v1789823657/office_image01.png",
+    alt: "Outside view of the Nihal Construction (Pvt) Ltd office building",
+    caption: "Our office",
+  },
+  {
     src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop",
     alt: "Placeholder image of a modern open-plan office workspace",
-    caption: "Our office",
+    caption: "Inside the office",
   },
   {
     src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",

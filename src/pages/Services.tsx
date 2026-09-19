@@ -8,7 +8,7 @@ import { company } from "../config/company";
 export default function ServicesPage() {
   usePageMeta({
     title: `Services | ${company.legalName}`,
-    description: "Explore Nihal Construction's services: building construction, civil engineering, infrastructure development, commercial development, renovations and project management.",
+    description: "Explore Nihal Construction's services: building construction, civil engineering, infrastructure development, commercial development, renovation & remodeling, residential construction, structural engineering, interior design and project management.",
   });
 
   return (
