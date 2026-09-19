@@ -23,16 +23,23 @@ const HERO_IMAGES = [
     alt: "Front view of the Nihal Construction (Pvt) Ltd office building",
   },
   {
-    src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2400&auto=format&fit=crop",
-    alt: "View looking up at modern glass commercial towers",
+    // Real photo, 1448x1086 — small for a full-screen hero, so Cloudinary AI e_upscale first.
+    src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_2400/f_auto,q_auto:best/v1789825485/CGR.png",
+    alt: "Open-plan office interior with rows of workstations",
   },
   {
-    src: "https://images.unsplash.com/photo-1590496793929-36417d3117de?q=80&w=2400&auto=format&fit=crop",
-    alt: "Aerial view of industrial infrastructure development",
+    // Real photo, 5712x4284 — plenty of resolution, so only capped to 2400px (no upscaling).
+    src: "https://res.cloudinary.com/carbll34/image/upload/c_limit,w_2400/f_auto,q_auto:best/v1789824940/2025_06_08_11_25_IMG_3336_1.png",
+    alt: "Red and white train cab simulator installed in the office",
   },
   {
     src: "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=2400&auto=format&fit=crop",
     alt: "Construction crane at height against the sky",
+  },
+  {
+    // Real photo, 4032x3024 — plenty of resolution, so only capped to 2400px (no upscaling).
+    src: "https://res.cloudinary.com/carbll34/image/upload/c_limit,w_2400/f_auto,q_auto:best/v1788529332/2023_08_26_08_18_IMG_4957.jpg",
+    alt: "Nihal Construction team and site photograph",
   },
 ];
 
@@ -48,11 +55,13 @@ export function Hero() {
 
   useEffect(() => {
     if (prefersReducedMotion) return;
-    const id = setInterval(() => {
+    // Re-armed on every slide change (including manual indicator clicks) so each slide
+    // gets a full SLIDE_DURATION and stays in sync with its progress bar.
+    const id = setTimeout(() => {
       setSlide((i) => (i + 1) % HERO_IMAGES.length);
     }, SLIDE_DURATION);
-    return () => clearInterval(id);
-  }, [prefersReducedMotion]);
+    return () => clearTimeout(id);
+  }, [prefersReducedMotion, slide]);
 
   const imageTransform = useMotionTemplate`translate3d(${springX}px, ${springY}px, 0)`;
   const layerTransform = useMotionTemplate`translate3d(${springX}px, 0, 0)`;
