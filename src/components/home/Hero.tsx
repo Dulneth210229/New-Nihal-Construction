@@ -17,8 +17,10 @@ const SLIDE_DURATION = 6000;
 // TODO: Replace with real Nihal Construction site photography.
 const HERO_IMAGES = [
   {
-    src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2400&auto=format&fit=crop",
-    alt: "Construction site with structural steel reinforcement underway",
+    // Real photo, only 1668x943 — too small for a full-screen hero on retina, so Cloudinary AI
+    // e_upscale rebuilds the detail before it's capped at 2400px (sharper than a plain resize).
+    src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_2400/f_auto,q_auto:best/v1789823657/office_image_02.png",
+    alt: "Front view of the Nihal Construction (Pvt) Ltd office building",
   },
   {
     src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2400&auto=format&fit=crop",
