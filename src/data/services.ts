@@ -33,41 +33,22 @@ export const services: Service[] = [
     points: ["Site engineering", "Foundation systems", "Structural design support", "Quality assurance"],
   },
   {
-    id: "infrastructure",
-    index: "03",
-    title: "Infrastructure Development",
-    summary: "Roads, drainage and utility works built for the long term.",
-    description:
-      "We build the infrastructure that supports growing communities — roadworks, drainage networks and utility corridors engineered for durability.",
-    image:
-      "https://images.unsplash.com/photo-1590496793929-36417d3117de?q=80&w=1600&auto=format&fit=crop",
-    points: ["Roads & pavements", "Stormwater drainage", "Utility corridors", "Site development"],
-  },
-  {
     id: "commercial-development",
-    index: "04",
+    index: "03",
     title: "Commercial Development",
     summary: "Purpose-built spaces for retail, hospitality and business.",
     description:
       "We partner with developers and businesses to deliver commercial spaces that perform — balancing design ambition with construction practicality.",
+    // Real photo, 1448x1086 (same source used for the hero's office-interior slide and Civil
+    // Engineering above) — too small for the desktop panel's crop at typical screen sizes, so
+    // e_upscale rebuilds detail first. No crop baked in — see the note on Building Construction.
     image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop",
+      "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1789825485/CGR.png",
     points: ["Retail spaces", "Office developments", "Hospitality projects", "Mixed-use buildings"],
   },
   {
-    id: "project-management",
-    index: "05",
-    title: "Project Management",
-    summary: "Single point of accountability from planning to delivery.",
-    description:
-      "Our project management approach keeps budgets, timelines and quality aligned — giving clients full visibility from groundbreaking to final handover.",
-    image:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop",
-    points: ["Planning & scheduling", "Cost control", "Site supervision", "Handover management"],
-  },
-  {
     id: "renovation-remodeling",
-    index: "06",
+    index: "04",
     title: "Renovation & Remodeling",
     summary: "Upgrades, remodels and refurbishments for existing buildings.",
     description:
@@ -81,7 +62,7 @@ export const services: Service[] = [
   },
   {
     id: "residential-construction",
-    index: "07",
+    index: "05",
     title: "Residential Construction",
     summary: "Custom homes and residential developments built to last.",
     description:
@@ -95,7 +76,7 @@ export const services: Service[] = [
   },
   {
     id: "structural-engineering",
-    index: "08",
+    index: "06",
     title: "Structural Engineering",
     summary: "Safe, efficient structural design and assessment.",
     description:
@@ -106,7 +87,7 @@ export const services: Service[] = [
   },
   {
     id: "interior-design",
-    index: "09",
+    index: "07",
     title: "Interior Design",
     summary: "Thoughtful interiors, designed and built in-house.",
     description:
