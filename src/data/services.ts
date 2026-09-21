@@ -9,8 +9,13 @@ export const services: Service[] = [
     summary: "End-to-end construction of residential and commercial buildings.",
     description:
       "From foundation to finishing, we deliver structurally sound, beautifully finished buildings on schedule — managing every trade under one accountable team.",
+    // Real photo, 1280x960 — the desktop panel crops this to a tall 4:5 box and the mobile
+    // accordion to a wide 16:10 box; on larger screens that needs more pixels than 1280x960
+    // gives, so the browser was upscaling it (visible softness). e_upscale rebuilds detail at
+    // a larger size *without* baking in either crop, so both layouts still get to choose their
+    // own crop via object-cover.
     image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600&auto=format&fit=crop",
+      "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1790002355/6-icprLi-q.jpg",
     points: ["Residential builds", "Commercial fit-outs", "Structural works", "Finishing & handover"],
   },
   {
@@ -20,8 +25,11 @@ export const services: Service[] = [
     summary: "Engineering-led execution for structurally demanding projects.",
     description:
       "Our civil engineering team plans and executes earthworks, foundations and structural systems with precision, backed by rigorous quality control at every stage.",
+    // Real photo, 1448x1086 — too small for the desktop panel's tall 4:5 crop at typical
+    // screen sizes (would be upscaled by the browser), so e_upscale rebuilds detail first.
+    // No crop baked in here, same reasoning as Building Construction's image above.
     image:
-      "https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=1600&auto=format&fit=crop",
+      "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1790004589/CGR_jgvjhvb.png",
     points: ["Site engineering", "Foundation systems", "Structural design support", "Quality assurance"],
   },
   {
@@ -64,8 +72,11 @@ export const services: Service[] = [
     summary: "Upgrades, remodels and refurbishments for existing buildings.",
     description:
       "We breathe new life into existing homes and commercial spaces — from full refurbishments to targeted upgrades — planned to minimise disruption and finished to a like-new standard.",
+    // Real photo, 3024x4032 (12MP portrait) — already more resolution than either the desktop
+    // panel or mobile accordion crop needs, so just capped and delivered at top quality (no
+    // upscaling, no baked-in crop — see the note on Building Construction's image above).
     image:
-      "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=1600&auto=format&fit=crop",
+      "https://res.cloudinary.com/carbll34/image/upload/c_limit,w_2400/f_auto,q_auto:best/v1790003386/2023_08_30_01_09_IMG_5090-B4EEH2Kl.jpg",
     points: ["Home remodeling", "Commercial refurbishment", "Structural repairs", "Interior & exterior finishing"],
   },
   {
