@@ -10,7 +10,7 @@ import { company } from "../config/company";
 export default function Projects() {
   usePageMeta({
     title: `Projects | ${company.legalName}`,
-    description: "Browse Nihal Construction's portfolio of commercial, residential and infrastructure projects across Sri Lanka.",
+    description: "Browse Nihal Construction's portfolio of completed and ongoing projects across Sri Lanka.",
   });
 
   const categories = useMemo(() => ["All", ...new Set(projects.map((p) => p.category))], []);
@@ -23,7 +23,7 @@ export default function Projects() {
       <PageHeader
         eyebrow="Our Projects"
         title="A portfolio built on precision."
-        description="A selection of completed, ongoing and upcoming work across commercial, residential and infrastructure sectors."
+        description="A selection of our completed and ongoing work across Sri Lanka."
         image="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=2000&auto=format&fit=crop"
       />
 

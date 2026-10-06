@@ -67,11 +67,11 @@ export const services: Service[] = [
     summary: "Custom homes and residential developments built to last.",
     description:
       "From single family homes to multi-unit residential developments, we build safe, comfortable and durable living spaces — managing the whole build from foundation to handover.",
-    // Source is only 1024x768 and heavily compressed. Cloudinary AI: e_gen_restore removes
-    // JPEG artefacts, e_upscale rebuilds detail at 4x, then it is capped to 1600px wide.
-    // Best fix is still uploading a larger original — swap the URL and drop these effects.
+    // Real photo, 1448x1086 — too small for the desktop panel's tall 4:5 crop at typical screen
+    // sizes, so e_upscale rebuilds detail first. No crop baked in, same reasoning as Building
+    // Construction's image.
     image:
-      "https://res.cloudinary.com/carbll34/image/upload/e_gen_restore/e_upscale/c_limit,w_1600/f_auto,q_auto:best/v1789817517/06-D2l7Zq9z.jpg",
+      "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791286018/Warm_Tropical_House_at_Night.png",
     points: ["Custom homes", "Housing developments", "Apartments & townhouses", "Turnkey delivery"],
   },
   {
