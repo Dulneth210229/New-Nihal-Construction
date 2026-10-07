@@ -212,4 +212,44 @@ export const projects: Project[] = [
       { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791360253/Warmly_Lit_Ornate_White_Pavilion_Setup.png", alt: "An ornate decorative pavilion set up at the property" },
     ],
   },
+  {
+    id: "6",
+    slug: "byd-showroom-altair",
+    name: "BYD Showroom, Altair",
+    category: "Renovation",
+    location: "Altair, Colombo, Sri Lanka",
+    status: "Completed",
+    // TODO: Confirm exact year for this project.
+    year: "TODO: Confirm year",
+    client: "BYD",
+    duration: "3.5 weeks",
+    summary: "Renovation and remodeling of the BYD showroom at the Altair building, Colombo, completed in three and a half weeks.",
+    description:
+      "Completed renovation and remodeling works for the BYD showroom at the Altair building, Colombo, delivering a refreshed, brand-ready frontage for BYD's Colombo showroom. The scope covered exterior upgrades around the showroom entrance, including landscaped planter areas and sidewalk reinstatement, carried out on an accelerated three-and-a-half week schedule with minimal disruption to the surrounding commercial precinct. Nihal Construction managed the works with close attention to site safety, finish quality, and schedule discipline, delivering on time to support the showroom's readiness.",
+    scope: [
+      "Showroom renovation & remodeling",
+      "Exterior frontage upgrades",
+      "Landscaped planter & sidewalk finishing",
+      "Accelerated 3.5-week turnaround",
+    ],
+    highlights: [
+      "Completed in just 3.5 weeks",
+      "Refreshed, brand-ready showroom frontage",
+      "Minimal disruption to the surrounding precinct",
+    ],
+    layout: "standard",
+    // Real project photography of the exterior frontage works. Sources are 1448x1086 or
+    // 1086x1448 — AI-upscaled to 3200px wide (no crop baked in), same approach used above.
+    coverImage: {
+      src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791363182/Modern_Tower_and_Branded_Construction_Truck.png",
+      alt: "The Altair tower in Colombo with a Nihal Construction site vehicle parked outside",
+    },
+    gallery: [
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791363182/Modern_Tower_and_Branded_Construction_Truck.png", alt: "The Altair tower in Colombo with a Nihal Construction site vehicle parked outside" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791363182/Urban_Construction_Crew_by_the_Planter.png", alt: "Site crew working on a planter area outside the showroom frontage" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791363182/Urban_Sidewalk_Landscaping_Work.png", alt: "Crew finishing landscaped planters along the sidewalk" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791363182/Daylight_Construction_Outside_NAWAKA.png", alt: "Exterior works in progress outside the showroom frontage" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791363186/Modern_City_Tower_and_Street_Construction.png", alt: "Street-level view of the Altair tower during the exterior works" },
+    ],
+  },
 ];
