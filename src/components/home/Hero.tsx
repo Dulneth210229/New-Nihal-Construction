@@ -14,7 +14,6 @@ import { Coordinates } from "../ui/Coordinates";
 
 const SLIDE_DURATION = 6000;
 
-// TODO: Replace with real Nihal Construction site photography.
 const HERO_IMAGES = [
   {
     // Real photo, only 1668x943 — too small for a full-screen hero on retina, so Cloudinary AI
@@ -31,10 +30,6 @@ const HERO_IMAGES = [
     // Real photo, 5712x4284 — plenty of resolution, so only capped to 2400px (no upscaling).
     src: "https://res.cloudinary.com/carbll34/image/upload/c_limit,w_2400/f_auto,q_auto:best/v1789824940/2025_06_08_11_25_IMG_3336_1.png",
     alt: "Red and white train cab simulator installed in the office",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=2400&auto=format&fit=crop",
-    alt: "Construction crane at height against the sky",
   },
   {
     // Real photo, 4032x3024 — plenty of resolution, so only capped to 2400px (no upscaling).
