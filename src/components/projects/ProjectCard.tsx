@@ -4,8 +4,8 @@ import type { Project } from "../../types";
 
 const statusStyles: Record<Project["status"], string> = {
   Completed: "bg-primary/15 text-primary-dark",
-  Ongoing: "bg-secondary/10 text-secondary",
-  Upcoming: "bg-ink-muted/10 text-ink-muted",
+  Ongoing: "bg-white/15 text-white",
+  Upcoming: "bg-white/10 text-white/70",
 };
 
 interface ProjectCardProps {

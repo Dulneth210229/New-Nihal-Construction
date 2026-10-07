@@ -9,8 +9,8 @@ import { company } from "../config/company";
 
 const statusStyles: Record<string, string> = {
   Completed: "bg-primary/15 text-primary-dark",
-  Ongoing: "bg-secondary/10 text-secondary",
-  Upcoming: "bg-ink-muted/10 text-ink-muted",
+  Ongoing: "bg-white/15 text-white",
+  Upcoming: "bg-white/10 text-white/70",
 };
 
 export default function ProjectDetail() {

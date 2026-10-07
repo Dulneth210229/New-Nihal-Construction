@@ -131,4 +131,85 @@ export const projects: Project[] = [
       { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791286016/Warm_Modern_Stairwell_Glow.png", alt: "Close-up of the custom timber staircase joinery" },
     ],
   },
+  {
+    id: "4",
+    slug: "wattala-commercial-development",
+    name: "Wattala Commercial Development",
+    category: "Commercial Development",
+    location: "Wattala, Sri Lanka",
+    status: "Ongoing",
+    // TODO: Confirm exact year for this project.
+    year: "TODO: Confirm year",
+    client: "Mr. Sajith",
+    // Estimated.
+    duration: "48 weeks",
+    summary: "An ongoing four-storey commercial development in Wattala, built for Mr. Sajith.",
+    description:
+      "The Wattala Commercial Development is an ongoing four-storey construction project, purpose-built to support modern commercial use. Designed with a focus on structural integrity, functionality, and long-term performance, the build is progressing in line with approved engineering requirements. Nihal Construction continues to deliver steady, quality-driven execution to ensure a timely and professional completion of this landmark development.",
+    scope: [
+      "Four-storey commercial construction",
+      "Structural engineering & integrity checks",
+      "Ground-floor commercial fit-out",
+      "Execution to approved engineering requirements",
+    ],
+    highlights: [
+      "Ground-floor commercial unit already operating",
+      "Built for structural integrity & long-term performance",
+      "Steady, quality-driven execution toward completion",
+    ],
+    layout: "standard",
+    // Real project photography of the building nearing completion (ground floor fitted out and
+    // operating, upper floors still under safety netting). Sources are 1448x1086 or 1086x1448 —
+    // AI-upscaled to 3200px wide (no crop baked in), same approach used for the projects above.
+    coverImage: {
+      src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791358143/01.png",
+      alt: "The four-storey Wattala Commercial Development nearing completion, ground floor already in commercial use",
+    },
+    gallery: [
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791358143/01.png", alt: "The four-storey Wattala Commercial Development nearing completion, ground floor already in commercial use" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791358144/02.png", alt: "Front elevation of the building, upper floors under safety netting" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791358142/03.png", alt: "Wider street view of the development with the finished forecourt and landscaping" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791358143/04.png", alt: "Corner view of the development showing building signage" },
+    ],
+  },
+  {
+    id: "5",
+    slug: "malkanthi-residence",
+    name: "Malkanthi",
+    category: "Residential",
+    location: "Malwaththa Road, Dehiwala, Sri Lanka",
+    status: "Completed",
+    // TODO: Confirm exact year for this project.
+    year: "TODO: Confirm year",
+    client: "Ms. Malkanthi",
+    duration: "60 weeks",
+    summary: "A calm, well-finished residence on Malwaththa Road, Dehiwala, built for Ms. Malkanthi.",
+    description:
+      "Completed a residential housing project at Malwaththa Road, Dehiwala for Ms. Malkanthi, delivering a calm, well-finished home that complements its green surroundings. The design features a welcoming verandah, clean white exterior finishes, and classic timber doors/windows, creating a timeless look with modern comfort. Executed with careful attention to workmanship, neat detailing, and site finishing, resulting in a fresh, move-in-ready residence.",
+    scope: [
+      "Residential housing construction",
+      "Verandah & exterior finishing",
+      "Timber doors & windows",
+      "Workmanship & site finishing detailing",
+    ],
+    highlights: [
+      "Welcoming verandah with timeless detailing",
+      "Clean white exterior finishes",
+      "Fresh, move-in-ready residence",
+    ],
+    layout: "standard",
+    // Real project photography. Sources are 1448x1086 or 1086x1448 — AI-upscaled to 3200px wide
+    // (no crop baked in), same approach used for the projects above.
+    coverImage: {
+      src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791360253/Warmly_Lit_Tropical_Veranda_at_Twilight.png",
+      alt: "The residence's welcoming verandah at twilight",
+    },
+    gallery: [
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791360253/Warmly_Lit_Tropical_Veranda_at_Twilight.png", alt: "The residence's welcoming verandah at twilight" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791360253/Warm_Tropical_Courtyard_at_Dusk.png", alt: "The residence's courtyard and timber doors and windows at dusk" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791360251/Warm_Evening_Modern_Courtyard_Home.png", alt: "Another view of the courtyard, showing the checkerboard-tiled flooring and timber finishes" },
+      // Decorative pavilion setup at the property — not a construction shot, included at the client's request.
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791360253/Warmly_Lit_Ornate_White_Pavilion_Setup.png", alt: "An ornate decorative pavilion set up at the property" },
+    ],
+  },
 ];
