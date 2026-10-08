@@ -252,4 +252,43 @@ export const projects: Project[] = [
       { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791363186/Modern_City_Tower_and_Street_Construction.png", alt: "Street-level view of the Altair tower during the exterior works" },
     ],
   },
+  {
+    id: "7",
+    slug: "keells-bellanwila",
+    name: "Keells - Bellanwila",
+    category: "Renovation",
+    location: "Bellanwila, Sri Lanka",
+    status: "Completed",
+    // TODO: Confirm exact year for this project.
+    year: "TODO: Confirm year",
+    client: "John Keells Holdings",
+    duration: "6 weeks",
+    summary: "A large-scale retail transformation of the Keells store at Bellanwila, completed for John Keells Holdings.",
+    description:
+      "Completed the Keells – Bellanwila Iconic Project, a large-scale retail transformation focused on upgrading key customer and operational zones. The scope included structural reconfiguration and design enhancements to the hot kitchen, bakery, liquor, and dining areas, improving flow, functionality, and efficiency. Delivered to elevate the premium Keells store experience with refined finishes, smarter layouts, and a modernised environment.",
+    scope: [
+      "Structural reconfiguration",
+      "Hot kitchen, bakery & liquor area upgrades",
+      "Dining area design enhancements",
+      "Store-wide finishes & layout improvements",
+    ],
+    highlights: [
+      "Upgraded key customer & operational zones",
+      "Refined finishes & smarter layouts",
+      "Modernised, premium store experience",
+    ],
+    layout: "standard",
+    // Real project photography. Sources are 1448x1086 or 1086x1448 — AI-upscaled to 3200px wide
+    // (no crop baked in), same approach used for the projects above.
+    coverImage: {
+      src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791449769/Vibrant_Keels_Storefront_on_a_Sunny_Day.png",
+      alt: "The Keells Bellanwila storefront exterior",
+    },
+    gallery: [
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791449769/Vibrant_Keels_Storefront_on_a_Sunny_Day.png", alt: "The Keells Bellanwila storefront exterior" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791449769/Sunny_Green_Facade_Scaffold_Maintenance.png", alt: "Crew working on scaffolding against the store's green facade" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791449770/Keells_Supermarket_Under_Maintenance.png", alt: "Store interior mid-renovation, shelving protected under tarps" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791449769/Industrial_Corridor_Ceiling_Renovation.png", alt: "Back-of-house ceiling and ductwork renovation in progress" },
+    ],
+  },
 ];
