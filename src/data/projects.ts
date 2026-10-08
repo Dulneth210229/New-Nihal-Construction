@@ -291,4 +291,47 @@ export const projects: Project[] = [
       { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791449769/Industrial_Corridor_Ceiling_Renovation.png", alt: "Back-of-house ceiling and ductwork renovation in progress" },
     ],
   },
+  {
+    id: "8",
+    slug: "keells-tile-renovation",
+    name: "Keells - Tile Renovation",
+    category: "Renovation",
+    // TODO: Confirm store location.
+    location: "TODO: Confirm store location",
+    status: "Completed",
+    // TODO: Confirm exact year for this project.
+    year: "TODO: Confirm year",
+    client: "John Keells Holdings",
+    duration: "1.5 weeks",
+    summary: "Tile renovation across roughly 8,000 sq ft of a Keells supermarket, completed in a week and a half.",
+    description:
+      "Completed the tile renovation for a Keells supermarket outlet, replacing the store's existing floor tiling with a new colour scheme across approximately 8,000 square feet of retail floor area. The work was carried out in sections to keep the store trading, with new tiles laid to a consistent level and finish throughout the sales floor. Delivered in just a week and a half, the renovation refreshed the store's interior look while maintaining Keells' operational standards throughout the changeover.",
+    scope: [
+      "Floor tile renovation",
+      "New tile colour scheme",
+      "~8,000 sq ft of retail floor area",
+      "Phased works to keep the store trading",
+    ],
+    highlights: [
+      "~8,000 sq ft of floor area renovated",
+      "New tile colour scheme installed",
+      "Completed in just 1.5 weeks",
+    ],
+    layout: "standard",
+    // Real project photography. Sources are 1448x1086 — AI-upscaled to 3200px wide (no crop
+    // baked in), same approach used for the projects above.
+    coverImage: {
+      src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791451135/Supermarket_Tile_Renovation_in_Progress.png",
+      alt: "New dark tile flooring laid alongside the store's original lighter tile, mid-renovation",
+    },
+    gallery: [
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791451135/Supermarket_Tile_Renovation_in_Progress.png", alt: "New dark tile flooring laid alongside the store's original lighter tile, mid-renovation" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791451145/Fresh_Produce_Aisle_Refresh.png", alt: "The produce aisle with the new tile flooring in place" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791451137/Supermarket_Floor_Renovation_Crew.png", alt: "Crew laying new floor tiles in a store aisle" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791451136/Supermarket_Floor_Renovation_Crew_1.png", alt: "Crew preparing and laying new tiles in another aisle" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791451135/Supermarket_Renovation_in_Progress_1.png", alt: "Tile renovation in progress near the checkout area" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791451134/Supermarket_Tiling_Renovation_in_Progress.png", alt: "New tiles being laid along a central aisle" },
+      { src: "https://res.cloudinary.com/carbll34/image/upload/e_upscale/c_limit,w_3200/f_auto,q_auto:best/v1791451133/Supermarket_Renovation_in_Progress.png", alt: "Tile renovation work in progress near the health and beauty section" },
+    ],
+  },
 ];

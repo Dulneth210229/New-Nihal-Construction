@@ -4,12 +4,21 @@ import { Reveal } from "../components/ui/Reveal";
 import { CornerMarks } from "../components/ui/CornerMarks";
 import { Coordinates } from "../components/ui/Coordinates";
 import { Button } from "../components/ui/Button";
-import { Clock, MapPin, Phone } from "lucide-react";
+import { CheckCircle2, Clock, MapPin, Phone } from "lucide-react";
 import { Stats } from "../components/home/Stats";
 import { CTA } from "../components/home/CTA";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { company } from "../config/company";
 import { officeGallery, director } from "../data/team";
+
+const credentials = [
+  "CIDB Grade CS2 • ICTAD C5",
+  "Highest Quality Standards",
+  "Professional & Experienced Team",
+  "On-Time Project Delivery",
+  "100% Client Satisfaction",
+  "20+ Years of Industry Experience",
+];
 
 const pillars = [
   {
@@ -73,6 +82,23 @@ export default function About() {
                     {pillar.title}
                   </span>
                   <p className="mt-4 text-sm leading-relaxed text-ink-muted">{pillar.text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-surface py-24 sm:py-32">
+        <div className="container-px">
+          <SectionHeading eyebrow="Credentials" title="Built on proven standards." align="center" />
+
+          <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {credentials.map((item, i) => (
+              <Reveal key={item} delay={i * 0.06}>
+                <div className="flex h-full items-center gap-3 rounded-2xl border border-border bg-background p-5">
+                  <CheckCircle2 size={22} className="shrink-0 text-primary" />
+                  <span className="font-display text-sm font-semibold text-ink">{item}</span>
                 </div>
               </Reveal>
             ))}
